@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { northernDogs } from './AllDogs';
+import DogsList from './DogsList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+console.log(northernDogs);
+
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      filteredDogs: northernDogs
+    };
+  }
+
+  filterDogs(e) {
+    const text = e.currentTarget.value;
+    const filteredDogs = this.getFilteredDogsForText(text)
+    this.setState({
+      filteredDogs
+    });
+  }
+
+  getFilteredDogsForText(text) {
+    return northernDogs.filter(dog => dog.toLowerCase().includes(text.toLowerCase()))
+  }
+  render() {
+    return (
+          <div>
+            <h1>Psy Północy</h1>
+            <input type="search" placeholder="Wyszukaj" onInput={this.filterDogs.bind(this)} />
+            <DogsList dogs={this.state.filteredDogs}/>
+          </div>
+    );
+  }
 }
 
 export default App;

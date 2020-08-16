@@ -2,8 +2,15 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('dogs header', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headerElement = getByText(/psy/i);
+  expect(headerElement).toBeInTheDocument();
 });
+
+test('placeholder for search', () => {
+  const { getByPlaceholderText } = render(<App />);
+  const placeholderElement = getByPlaceholderText(/wyszukaj/i);
+  expect(placeholderElement).toBeInTheDocument();
+});
+

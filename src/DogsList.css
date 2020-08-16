@@ -1,0 +1,9 @@
+
+ul {
+    list-style-image: url("./images/dogpawicon.png");
+  }
+
+li {
+    margin-bottom: 1.5em;
+    vertical-align: middle;
+}
