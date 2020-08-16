@@ -30,6 +30,12 @@ class App extends React.Component {
             <h1>Psy Północy</h1>
             <input type="search" placeholder="Wyszukaj" onInput={this.filterDogs.bind(this)} />
             <DogsList dogs={this.state.filteredDogs}/>
+            <footer>
+              <p>
+              © 2020, 
+                <a href="https://github.com/ustrojny"> Ula Strojny</a>
+              </p>
+              </footer>
           </div>
     );
   }
