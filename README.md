@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live demo: [https://dogs-filter.vercel.app](https://dogs-filter.vercel.app)
+## Info
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />
+This project was inspired by React tutorial from TypeOfWeb and created for learning purposes. <br />
+It is a simple filter for a static list of items.
 
 ## Available Scripts
 
