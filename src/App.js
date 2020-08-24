@@ -26,7 +26,7 @@ class App extends React.Component {
   }
   render() {
     return (
-          <div>
+          <div id="wrapper">
             <h1>Psy Północy</h1>
             <input type="search" placeholder="Wyszukaj" onInput={this.filterDogs.bind(this)} />
             <DogsList dogs={this.state.filteredDogs}/>
